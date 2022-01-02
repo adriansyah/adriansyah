@@ -11,20 +11,22 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v2
         with:
-          node-version: "14"
-          cache: "yarn"
-          cache-dependency-path: yarn.lock
+          node-version: 14
 
       - name: Cache  💾
         uses: actions/cache@v2
         with:
           path: ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}
+          # Generate a new cache whenever packages or source files change.
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          # If source files changed but packages didn't, rebuild from a prior cache.
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         uses: actions/setup-node@v1
       - run: yarn install
-      - run: yarn build
+      - run: yarn export
         env:
           CI: true
 
@@ -33,5 +35,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: src/out # The folder the action should deploy.
+          FOLDER: out # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
