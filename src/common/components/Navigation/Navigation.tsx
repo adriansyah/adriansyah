@@ -22,7 +22,7 @@ export const Navigation = () => {
             <Link href="/">
               <a>
                 <span className="sr-only">Home</span>
-                <h1>Adriansyah</h1>
+                <h1 className="text-2xl">Adriansyah</h1>
               </a>
             </Link>
           </div>
