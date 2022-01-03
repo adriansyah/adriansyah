@@ -5,11 +5,12 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 
-const solutions = [
+export const showcases = [
   {
     name: "Algorithms",
     description: "Understanding and solve algoritm questions.",
     href: "/showcases/algorithms",
+    imageSrc: "https://source.unsplash.com/Pt27b3dRdVA/h=320",
   },
 ];
 
@@ -64,7 +65,7 @@ export const Navigation = () => {
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          {solutions.map((item) => (
+                          {showcases.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
@@ -131,7 +132,7 @@ export const Navigation = () => {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  {solutions.map((item) => (
+                  {showcases.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
