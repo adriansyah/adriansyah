@@ -34,7 +34,10 @@ const IsPalindrome: NextPage = () => {
         <title>
           Adriansyah | Showcases - Algorithms - Palindrome I found you
         </title>
-        <meta name="description" content="A way to check text is palindrome." />
+        <meta
+          name="description"
+          content="implementation of a way to check text is palindrome."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
@@ -45,6 +48,13 @@ const IsPalindrome: NextPage = () => {
           <h2 className="mb-9 font-sans text-3xl text-center font-bold text-gray-800 underline underline-offset-8">
             Palindrome I found you
           </h2>
+          <p className="text-center">
+            This is implementation how to check if text is palindrome
+          </p>
+          <p className="text-center">
+            <strong>NOTE:</strong>
+            <em> Do not change the function name</em>
+          </p>
         </header>
         <div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-5">
           <div>
