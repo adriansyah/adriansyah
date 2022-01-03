@@ -5,6 +5,7 @@ module.exports = removeImports({
   reactStrictMode: true,
   images: {
     domains: ["source.unsplash.com"],
+    loader: "custom",
   },
   webpack(config) {
     config.module.rules.push({

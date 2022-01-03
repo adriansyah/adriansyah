@@ -5,7 +5,7 @@ import {
   Navigation,
   showcases,
 } from "../../src/common/components/Navigation/Navigation";
-import { Socials } from "../../src/common/components/Socials/Socials";
+import { unsplashLoader } from "../../src/common/utils/unsplashLoader";
 
 const Showcases: NextPage = () => {
   return (
@@ -33,6 +33,7 @@ const Showcases: NextPage = () => {
                 <div key={callout.name} className="group relative">
                   <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                     <Image
+                      loader={unsplashLoader}
                       layout="fill"
                       src={callout.imageSrc}
                       alt={callout.name}

@@ -10,7 +10,7 @@ export const showcases = [
     name: "Algorithms",
     description: "Understanding and solve algoritm questions.",
     href: "/showcases/algorithms",
-    imageSrc: "https://source.unsplash.com/Pt27b3dRdVA/h=320",
+    imageSrc: "Pt27b3dRdVA",
   },
 ];
 
