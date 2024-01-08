@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <main className="bg-stone-100 flex-grow flex flex-col justify-center items-center">
         <h2 className="font-sans font-bold text-5xl mb-7">Adriansyah</h2>
         <Socials />
-        <p className="font-sans text-lg tracking-wide text-gray-500">
+        <p className="font-sans text-lg tracking-wide text-gray-700">
           Getting to know me better and what I do.
         </p>
         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
