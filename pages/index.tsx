@@ -34,10 +34,11 @@ const Home: NextPage = () => {
           </div>
           <div className="mt-3 sm:mt-0 sm:ml-3">
             <a
-              href="/profile"
+              target="_blank"
+              href="https://resume.io/r/S47Zj9FIy"
               className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-slate-700 bg-zinc-200 hover:bg-zinc-300 md:py-4 md:text-lg md:px-10"
             >
-              Profile
+              Resume
             </a>
           </div>
         </div>
